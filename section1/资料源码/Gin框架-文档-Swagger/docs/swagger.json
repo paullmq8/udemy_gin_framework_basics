@@ -1,0 +1,118 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Gin Swagger 项目",
+        "title": "Gin swagger",
+        "contact": {
+            "name": "kangshaojun",
+            "url": "www.kangshaojun.com",
+            "email": "kangshaojun@gmail.com"
+        },
+        "license": {},
+        "version": "1.0"
+    },
+    "host": "localhost:8080",
+    "paths": {
+        "/user": {
+            "post": {
+                "consumes": [
+                    "application/x-json-stream"
+                ],
+                "tags": [
+                    "用户"
+                ],
+                "summary": "添加用户",
+                "operationId": "1",
+                "parameters": [
+                    {
+                        "description": "用户",
+                        "name": "article",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/model.UserModel"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/model.UserModel"
+                        }
+                    },
+                    "409": {
+                        "description": "Conflict",
+                        "schema": {
+                            "$ref": "#/definitions/model.UserModel"
+                        }
+                    }
+                }
+            }
+        },
+        "/user/{id}": {
+            "get": {
+                "consumes": [
+                    "application/x-json-stream"
+                ],
+                "summary": "通过Id查询用户",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/model.UserModel"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "consumes": [
+                    "application/x-json-stream"
+                ],
+                "summary": "通过id删除用户",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/model.UserModel"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "model.UserModel": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

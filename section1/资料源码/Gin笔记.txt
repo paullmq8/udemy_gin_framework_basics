@@ -1,0 +1,100 @@
+www.kangshaojun.com
+
+Golang Web
+
+Gin  SpringBoot ThinkPHP
+
+路由处理
+模板
+表单处理
+连接数据库
+文件上传
+中间件
+Restful接口
+Swagger
+ORM
+JWT
+
+
+GET      /url/list 查看
+POST     /url/create 创建
+PUT      /url/update 更新
+DELETE   /url/delete 删除
+PATCH
+HEAD 
+OPTIONS
+
+
+路由规则
+/usr/:name
+/user/kevin
+
+/user/:name/*action
+/user/keivn/
+/user/kevin/send
+
+
+//返回格式
+JSON
+XML
+YAML
+
+
+
+//中间件  拦截器
+Next
+
+
+
+
+//Restful
+/user/id
+/user/10
+
+
+
+//文档
+Swagger APIDoc
+
+
+//gorm
+sql注入
+
+
+//JWT
+JSON WEB TOKEN
+
+Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJiYmJAMTYzLmNvbSIsImV4cCI6MTYwNTk0NjkyNiwianRpIjoiXHUwMDAwIiwiaWF0IjoxNjA1ODYwNTI2LCJpc3MiOiJnaW4gaGVsbG8iLCJuYmYiOjE2MDU4NjA1MjYsInN1YiI6ImxvZ2luIn0.wFi0uRoXmQr2fEr2PloGXslUZlSmhRL2dHM9zmp_pHg
+
+
+Header
+typ JWT
+alg HS256
+
+Payload
+Audience	表示JWT的受众
+ExpiresAt	失效时间
+Id			签发编号
+IssuedAt	签发时间
+Issuer	    签发人
+NotBefore	生效时间
+Subject	    主题
+
+
+Verify Signature
+
+
+登录原理
+Client---> POST ---> Login ---> Server ---> Create JWT ---> Client ---> Save LocalStorage 
+
+调用接口
+Client ---> POST + Header(Token) ---> Server Auth ---> Success ---> Client 
+
+
+
+
+
+token = "Bearer " + token
+
+
+

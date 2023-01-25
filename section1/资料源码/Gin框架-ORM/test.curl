@@ -1,0 +1,9 @@
+curl -X GET http://localhost:8080/users
+
+curl -X GET http://localhost:8080/user/5
+
+
+curl -X POST http://localhost:8080/user -i -H "Content-Type: application/json" -d '{"id":13,"email":"133@133.com","password":"133"}'
+
+
+curl -X DELETE http://localhost:8080/user/12

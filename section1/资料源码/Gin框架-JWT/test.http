@@ -1,0 +1,31 @@
+
+GET  http://localhost:8080/testToken
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJiYmJAMTYzLmNvbSIsImV4cCI6MTYwNTk0OTc5NSwianRpIjoiXHUwMDA0IiwiaWF0IjoxNjA1ODYzMzk1LCJpc3MiOiJnaW4gaGVsbG8iLCJuYmYiOjE2MDU4NjMzOTUsInN1YiI6ImxvZ2luIn0.O5L7otItPAbhTZiZwIWXTcbZe2GmrHNQHC_AkAytVJo
+
+
+POST http://localhost:8080/login
+content-type: application/json;
+
+{
+    "id":4,
+    "email":"bbb@163.com",
+    "password":"bbb"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
